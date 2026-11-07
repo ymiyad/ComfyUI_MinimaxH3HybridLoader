@@ -416,9 +416,7 @@ def load_minimax_h3_hybrid(
     model_patcher.cached_patcher_init = (
         load_minimax_h3_hybrid,
         (base_path, overlay_path, preset, custom_overlay_globs, custom_base_globs,
-         weight_dtype, block_range_start, block_range_end, final_adaln_from_overlay,
-         False),  # NOTE: disable_dynamic=False on reload so the deepcloned
-                  # patcher is itself clonable.
+         weight_dtype, block_range_start, block_range_end, final_adaln_from_overlay),
     )
     return model_patcher
 
